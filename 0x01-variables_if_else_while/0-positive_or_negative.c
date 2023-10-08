@@ -8,13 +8,26 @@
 int main(void)
 {
     int n;
+
+    /* Initialize random seed */
     srand(time(0));
-    n = rand() - RAND_MAX/2;
+
+    /* Generate a random number and assign it to n */
+    n = rand() - RAND_MAX / 2;
+
+    /* Check if n is positive, negative, or zero and print the result */
     if (n > 0)
-    printf("%d is positive\n", n);
-    else if (n ==0)
-    printf("%d is zero\n", n);
+    {
+        printf("%d is positive\n", n);
+    }
+    else if (n < 0)
+    {
+        printf("%d is negative\n", n);
+    }
     else
-    printf("%d is negative\n", n);
+    {
+        printf("0 is zero\n");
+    }
+
     return (0);
 }
